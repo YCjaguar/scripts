@@ -1,0 +1,14 @@
+name: testcom
+
+on:
+  push:
+    paths:
+      - 'test/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: runt
+      run: make -C test
